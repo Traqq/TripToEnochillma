@@ -13,6 +13,7 @@ namespace VHS
                     [Space, Header("Data")]
                     [SerializeField] private MovementInputData movementInputData = null;
                     [SerializeField] private HeadBobData headBobData = null;
+                    [SerializeField] private bool CanJump = false;
 
                 #endregion
                     
@@ -530,7 +531,7 @@ namespace VHS
                 }
                 protected virtual void HandleJump()
                 {
-                    if(movementInputData.JumpClicked && !movementInputData.IsCrouching)
+                    if(movementInputData.JumpClicked && !movementInputData.IsCrouching &&CanJump == true)
                     {
                         //m_finalMoveVector.y += jumpSpeed /* m_currentSpeed */; // we are adding because ex. when we are going on slope we want to keep Y value not overwriting it
                         m_finalMoveVector.y = jumpSpeed /* m_currentSpeed */; // turns out that when adding to Y it is too much and it doesn't feel correct because jumping on slope is much faster and higher;
