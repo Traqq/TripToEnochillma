@@ -5052,6 +5052,18 @@ PrefabInstance:
       propertyPath: currentCam
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7221145126376727299, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}
+      propertyPath: isWaterLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221145126376727299, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}
+      propertyPath: clipPlaneOffset
+      value: 4.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221145126376727299, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}
+      propertyPath: enableReflectionBlur
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7221145126376727300, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}
       propertyPath: m_RootOrder
       value: 2
