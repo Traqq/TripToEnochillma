@@ -74,7 +74,7 @@ Material:
     - _Metallicness: 0
     - _NORMAL_MAP: 0
     - _NormalStrength: 0.254
-    - _NormalTiling: 0.9
+    - _NormalTiling: 1
     - _Pixelate: 0
     - _RT_REFRACTION: 0
     - _ReflectionFresnel: 2.78

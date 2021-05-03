@@ -19,7 +19,7 @@ Shader "StylizedWater/Desktop"
 		_ReflectionRefraction("ReflectionRefraction", Range( 0 , 0.2)) = 0.05
 		[Toggle]_Worldspacetiling("Worldspace tiling", Float) = 1
 		_NormalTiling("NormalTiling", Range( 0 , 1)) = 0.9
-		_EdgeFade("EdgeFade", Range( 0.01 , 3)) = 0.2448298
+		_EdgeFade("EdgeFade", Range( 0.01 , 10)) = 0.2448298
 		_RimSize("Rim Size", Range( 0 , 20)) = 6
 		_Rimfalloff("Rim falloff", Range( 0.1 , 50)) = 10
 		_Rimtiling("Rim tiling", Float) = 0.5

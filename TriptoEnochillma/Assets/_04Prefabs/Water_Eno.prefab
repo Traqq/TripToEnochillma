@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2879121614201742640
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4882492301317670448, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_Name
+      value: Water_Eno
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: edgeFade
+      value: 7.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waveSize
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waveTint
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: foamSpeed
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waveSpeed
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: currentCam
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: rimColor.a
+      value: 0.4392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: rimColor.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: rimColor.g
+      value: 0.57957506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: rimColor.r
+      value: 0.45490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: foamOpacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: normalTiling
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterColor.b
+      value: 0.98039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterColor.g
+      value: 0.07450981
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterColor.r
+      value: 0.06952646
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: fresnelColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: fresnelColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waveDirectionXZ.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waveDirectionXZ.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waveDirectionXZ.z
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterShallowColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterShallowColor.b
+      value: 0.8156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterShallowColor.g
+      value: 0.0627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670451, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: waterShallowColor.r
+      value: 0.05490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99993455
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000023961077
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.011440379
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00020942933
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.311
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882492301317670452, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.024
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d8c2b602bb92864499abf9559c0191c, type: 3}
