@@ -129,5 +129,5 @@ Material:
     - _RimColor: {r: 0.45490196, g: 0.57957506, b: 0.91764706, a: 0.4392157}
     - _WaterColor: {r: 0.06952646, g: 0.07450981, b: 0.98039216, a: 0}
     - _WaterShallowColor: {r: 0.05490196, g: 0.0627451, b: 0.8156863, a: 1}
-    - _WaveDirection: {r: 0.1, g: 0.01, b: 0.06, a: 0}
+    - _WaveDirection: {r: 0.1, g: 0, b: 0.06, a: 0}
   m_BuildTextureStacks: []
