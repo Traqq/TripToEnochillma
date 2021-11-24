@@ -2927,6 +2927,29 @@ MonoBehaviour:
   frustumSettings:
     baseSettings: {fileID: 245864725}
     qualitySettings: {fileID: 770299021}
+--- !u!1 &1042896989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3843716870331872631, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+  m_PrefabInstance: {fileID: 1042896985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042896990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042896989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f87133b4b838a468924ed759c7d4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_camera: {fileID: 1042897000}
+--- !u!20 &1042897000 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3843716870190975471, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+  m_PrefabInstance: {fileID: 1042896985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1062250534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3496,6 +3519,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7221145126376727299, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}
       propertyPath: waveDirectionXZ.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221145126376727299, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}
+      propertyPath: reflectionStrength
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7221145126376727300, guid: b5fef1c9732610a49ad1930cf3e4056a, type: 3}

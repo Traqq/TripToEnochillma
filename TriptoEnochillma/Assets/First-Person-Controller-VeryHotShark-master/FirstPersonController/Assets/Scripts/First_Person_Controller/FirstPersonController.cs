@@ -568,7 +568,10 @@ namespace VHS
 
                     transform.rotation = Quaternion.Slerp(_currentRot,_desiredRot,Time.deltaTime * smoothRotateSpeed);
                 }
-            #endregion
         #endregion
+
+    
+       
     }
 }
+#endregion
