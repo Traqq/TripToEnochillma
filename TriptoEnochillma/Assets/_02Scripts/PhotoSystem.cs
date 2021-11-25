@@ -5,9 +5,9 @@ using UnityEngine;
 public class PhotoSystem : MonoBehaviour
 {
 
-    private RenderTexture m_renderTexture;
+    [SerializeField] private RenderTexture m_renderTexture;
     private Vector2Int m_textureSize;
-    [SerializeField] Camera m_camera;
+    [SerializeField] private Camera m_camera;
     
     private void Update()
     {
