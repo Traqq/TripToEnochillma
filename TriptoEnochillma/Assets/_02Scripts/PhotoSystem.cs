@@ -18,7 +18,7 @@ public class PhotoSystem : MonoBehaviour
 
     public string ScreenShotName(int a_width, int a_height)
     {
-        return string.Format("{0}/screenshots/screen_{1}x{2}_{3}.png", Application.dataPath, a_width, a_height, System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+        return string.Format("{0}/_09screenshots/screen_{1}x{2}_{3}.png", Application.dataPath, a_width, a_height, System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
     }
 
     public void TakeScreenShot()
