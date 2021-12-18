@@ -16,6 +16,9 @@ public class PhotoCapture : MonoBehaviour
     [Header("Photo Fader Effect")]
     [SerializeField] private Animator fadingAnimation;
 
+    [Header("Sound Effect")]
+    [SerializeField] private AudioSource cameraClick;
+
     private Texture2D screenCapture;
     private bool viewingPhoto;
 
@@ -57,6 +60,7 @@ public class PhotoCapture : MonoBehaviour
 
     void ShowPhoto()
     {
+        cameraClick.Play();
         StartCoroutine(CameraFlashEffect());
         
         Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
