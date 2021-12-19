@@ -35,7 +35,10 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private int resWidth = 2550;
     [SerializeField] private int resHeight = 3300;
 
-    private PostProcessProfile profile;
+    [Header("UI")]
+    [SerializeField] private GameObject cameraUI;
+
+    private PostProcessProfile profileP;
     private Texture2D screenCapture;
     private bool viewingPhoto;
     private bool isInPhotoMode = false;
@@ -45,16 +48,12 @@ public class PhotoCapture : MonoBehaviour
     void Start()
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        //profile = postProcProfile.GetComponent<PostProcessProfile>();
+        postProcProfile = postProcProfile.GetComponent<PostProcessVolume>();
+        profileP = postProcProfile.profile;
     }
 
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Equals) && isInPhotoMode == true)
-        {
-            profile = bloomProfile;
-        }*/
-
 
         if(Input.GetKeyDown(KeyCode.N) && isInPhotoMode == true)
         {
@@ -71,6 +70,7 @@ public class PhotoCapture : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B) && isInPhotoMode == false)
         {
             postProc.SetActive(true);
+            cameraUI.SetActive(true);
             isInPhotoMode = true;
         }
 
@@ -79,10 +79,17 @@ public class PhotoCapture : MonoBehaviour
             securityTimer += Time.deltaTime;
         }
 
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && isInPhotoMode == true)
+        {
+            postProcProfile.profile = bloomProfile;
+            
+        }
+
         if (Input.GetKeyDown(KeyCode.B) && isInPhotoMode == true && securityTimer >= 1.0f)
         {
             RemovePhoto();
             postProc.SetActive(false);
+            cameraUI.SetActive(false);
             isInPhotoMode = false;
             securityTimer = 0;
         }

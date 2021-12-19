@@ -102,8 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133829876154456396}
-  - component: {fileID: 7522445109913740989}
-  - component: {fileID: 1567416166220985447}
+  - component: {fileID: 2820883509264005577}
   m_Layer: 3
   m_Name: PhotoMode_PostProcess
   m_TagString: Untagged
@@ -125,7 +124,7 @@ Transform:
   m_Father: {fileID: 4471993359028821648}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7522445109913740989
+--- !u!114 &2820883509264005577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,24 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 8acf0e05e3dba3f4abcb21b84619dc1c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: ace01be88bb1e424e99b3ea7a84e35e5, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1567416166220985447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454033423481292892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e00807f7a8eec34e89dd29cb1040a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volume: {fileID: 7522445109913740989}
 --- !u!1 &3843716869363435361
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +513,6 @@ GameObject:
   - component: {fileID: 3843716870331872628}
   - component: {fileID: 3843716870331872635}
   - component: {fileID: 3843716870331872632}
-  - component: {fileID: 1042896990}
   m_Layer: 0
   m_Name: P_First_Person_Controller
   m_TagString: Untagged
@@ -756,21 +741,6 @@ MonoBehaviour:
   cameraInputData: {fileID: 11400000, guid: 91ebd8974cbf1964f86a0e8b5e93ed5c, type: 2}
   movementInputData: {fileID: 11400000, guid: abad080c0665fdc4cb00444da1f990a9, type: 2}
   interactionInputData: {fileID: 11400000, guid: 53d9f3696d1130146ae3edd77cffcd05, type: 2}
---- !u!114 &1042896990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3843716870331872631}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f87133b4b838a468924ed759c7d4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  resWidth: 1920
-  resHeight: 1080
-  m_camera: {fileID: 0}
 --- !u!1 &8531228223312901735
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,10 +785,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2310dd771a17634ea063a63e0184fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vignetteProfile: {fileID: 454033423481292892}
+  postProc: {fileID: 454033423481292892}
+  postProcProfile: {fileID: 2820883509264005577}
+  vignetteProfile: {fileID: 11400000, guid: ace01be88bb1e424e99b3ea7a84e35e5, type: 2}
+  bloomProfile: {fileID: 11400000, guid: 2826a1aeb52499c469e240ede2d8b9ca, type: 2}
+  m_camera: {fileID: 3843716870190975471}
   photoDisplayArea: {fileID: 0}
   photoFrame: {fileID: 0}
   cameraFlash: {fileID: 1742575872}
   flashTime: 0.2
   fadingAnimation: {fileID: 0}
   cameraClick: {fileID: 0}
+  resWidth: 2048
+  resHeight: 2048
