@@ -3294,6 +3294,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 791727928}
     - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+      propertyPath: postProc
+      value: 
+      objectReference: {fileID: 1042896986}
+    - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
       propertyPath: resWidth
       value: 2048
       objectReference: {fileID: 0}
@@ -3310,9 +3314,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 409332199}
     - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+      propertyPath: bloomProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 2826a1aeb52499c469e240ede2d8b9ca, type: 2}
+    - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
       propertyPath: fadingAnimation
       value: 
       objectReference: {fileID: 755537808}
+    - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+      propertyPath: postProcProfile
+      value: 
+      objectReference: {fileID: 1042896989}
+    - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+      propertyPath: vignetteProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 2826a1aeb52499c469e240ede2d8b9ca, type: 2}
     - target: {fileID: 1248884880, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
       propertyPath: photoDisplayArea
       value: 
@@ -3375,6 +3391,22 @@ PrefabInstance:
       objectReference: {fileID: 770299021}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+--- !u!1 &1042896986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 454033423481292892, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+  m_PrefabInstance: {fileID: 1042896985}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1042896989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7522445109913740989, guid: b2a0df894ff4e104094394ec3de0a9b2, type: 3}
+  m_PrefabInstance: {fileID: 1042896985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042896986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1062250534
 PrefabInstance:
   m_ObjectHideFlags: 0

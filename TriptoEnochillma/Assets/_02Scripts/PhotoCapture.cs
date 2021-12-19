@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PhotoCapture : MonoBehaviour
 {
-    [Header("Photo PostProc")]
-    [SerializeField] private GameObject vignetteProfile;
+    [Header("PostProc")]
+    [SerializeField] private GameObject postProc;
+    [SerializeField] private PostProcessVolume postProcProfile;
+
+    [Header("PostProc Profile")]
+    [SerializeField] private PostProcessProfile vignetteProfile;
+    [SerializeField] private PostProcessProfile bloomProfile;
 
     [Header("Camera")]
     [SerializeField] private Camera m_camera;
@@ -29,7 +35,7 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private int resWidth = 2550;
     [SerializeField] private int resHeight = 3300;
 
-
+    private PostProcessProfile profile;
     private Texture2D screenCapture;
     private bool viewingPhoto;
     private bool isInPhotoMode = false;
@@ -38,11 +44,18 @@ public class PhotoCapture : MonoBehaviour
 
     void Start()
     {
-        screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);   
+        screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        //profile = postProcProfile.GetComponent<PostProcessProfile>();
     }
 
     void Update()
     {
+        /*if (Input.GetKeyDown(KeyCode.Equals) && isInPhotoMode == true)
+        {
+            profile = bloomProfile;
+        }*/
+
+
         if(Input.GetKeyDown(KeyCode.N) && isInPhotoMode == true)
         {
             if(!viewingPhoto)
@@ -57,7 +70,7 @@ public class PhotoCapture : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B) && isInPhotoMode == false)
         {
-            vignetteProfile.SetActive(true);
+            postProc.SetActive(true);
             isInPhotoMode = true;
         }
 
@@ -69,7 +82,7 @@ public class PhotoCapture : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B) && isInPhotoMode == true && securityTimer >= 1.0f)
         {
             RemovePhoto();
-            vignetteProfile.SetActive(false);
+            postProc.SetActive(false);
             isInPhotoMode = false;
             securityTimer = 0;
         }
