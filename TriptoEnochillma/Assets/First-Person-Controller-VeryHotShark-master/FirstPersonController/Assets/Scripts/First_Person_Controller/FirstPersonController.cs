@@ -8,9 +8,10 @@ namespace VHS
     public class FirstPersonController : MonoBehaviour
     {
         #region Variables
-            #region Private Serialized     
-                #region Data
-                    [Space, Header("Data")]
+
+        #region Private Serialized     
+        #region Data
+        [Space, Header("Data")]
                     [SerializeField] private MovementInputData movementInputData = null;
                     [SerializeField] private HeadBobData headBobData = null;
                     [SerializeField] private bool CanJump = false;
@@ -235,11 +236,13 @@ namespace VHS
                     m_headBob.CurrentStateHeight = m_initCamHeight;
 
                     m_walkRunSpeedDifference = runSpeed - walkSpeed;
-                }
-            #endregion
 
-            #region Smoothing Methods
-                protected virtual void SmoothInput()
+                }
+        #endregion
+
+
+        #region Smoothing Methods
+        protected virtual void SmoothInput()
                 {
                     m_inputVector = movementInputData.InputVector.normalized;
                     m_smoothInputVector = Vector2.Lerp(m_smoothInputVector,m_inputVector,Time.deltaTime * smoothInputSpeed);
@@ -356,8 +359,8 @@ namespace VHS
                     float _smoothInputVectorMagnitude = experimental ? m_smoothInputVectorMagnitude : 1f;
                     Vector3 _finalVector = m_smoothFinalMoveDir * m_finalSmoothCurrentSpeed * _smoothInputVectorMagnitude;
 
-                    // We have to assign individually in order to make our character jump properly because before it was overwriting Y value and that's why it was jerky now we are adding to Y value and it's working
-                    m_finalMoveVector.x = _finalVector.x ;
+            // We have to assign individually in order to make our character jump properly because before it was overwriting Y value and that's why it was jerky now we are adding to Y value and it's working
+            m_finalMoveVector.x = _finalVector.x ;
                     m_finalMoveVector.z = _finalVector.z ;
 
                     if(m_characterController.isGrounded) // Thanks to this check we are not applying extra y velocity when in air so jump will be consistent

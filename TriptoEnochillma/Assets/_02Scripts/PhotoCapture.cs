@@ -55,7 +55,7 @@ public class PhotoCapture : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.N) && isInPhotoMode == true)
+        /*if(Input.GetKeyDown(KeyCode.N) && isInPhotoMode == true)
         {
             if(!viewingPhoto)
             {
@@ -92,7 +92,7 @@ public class PhotoCapture : MonoBehaviour
             cameraUI.SetActive(false);
             isInPhotoMode = false;
             securityTimer = 0;
-        }
+        }*/
     }
 
     IEnumerator CapturePhoto()
