@@ -81,6 +81,7 @@ namespace VHS
                 float  _targetFOV = m_camInputData.IsZooming ? m_initFOV : zoomFOV;
 
                 m_camInputData.IsZooming = !m_camInputData.IsZooming;
+                Debug.Log("ZOOMING : " + m_camInputData.IsZooming);
                 m_zooming = m_camInputData.IsZooming;
 
                 while(_percent < 1f)

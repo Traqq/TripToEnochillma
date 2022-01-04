@@ -11,7 +11,7 @@ namespace VHS
                 [SerializeField] private CameraInputData camInputData = null;
 
                 [Space,Header("Custom Classes")]
-                [SerializeField] private CameraZoom cameraZoom = null;
+                [SerializeField] internal CameraZoom cameraZoom = null;
                 [SerializeField] private CameraSwaying cameraSway = null;
 
             #endregion
@@ -102,8 +102,8 @@ namespace VHS
 
             void HandleZoom()
             {
-                if(camInputData.ZoomClicked || camInputData.ZoomReleased)
-                    cameraZoom.ChangeFOV(this);
+                //if(camInputData.ZoomClicked || camInputData.ZoomReleased)
+                    //cameraZoom.ChangeFOV(this);
 
             }
 

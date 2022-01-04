@@ -52,8 +52,56 @@ public class PhotoCapture : MonoBehaviour
         profileP = postProcProfile.profile;
     }
 
+    public void ActivePhotoMode()
+    {
+        if (isInPhotoMode == false)
+        {
+            postProc.SetActive(true);
+            cameraUI.SetActive(true);
+            isInPhotoMode = true;
+        }
+        if (isInPhotoMode == true && securityTimer >= 1.0f)
+        {
+            RemovePhoto();
+            postProc.SetActive(false);
+            cameraUI.SetActive(false);
+            isInPhotoMode = false;
+            securityTimer = 0;
+        }
+    }
+
+    public void TakePhoto()
+    {
+        if (isInPhotoMode == true)
+        {
+            if (!viewingPhoto)
+            {
+                StartCoroutine(CapturePhoto());
+            }
+            else
+            {
+                RemovePhoto();
+            }
+        }
+
+    }
+
+    public void SwitchFilter()
+    {
+
+        if (isInPhotoMode == true)
+        {
+            postProcProfile.profile = bloomProfile;
+
+        }
+    }
+
     void Update()
     {
+        if (isInPhotoMode == true)
+        {
+            securityTimer += Time.deltaTime;
+        }
 
         /*if(Input.GetKeyDown(KeyCode.N) && isInPhotoMode == true)
         {

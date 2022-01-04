@@ -18,13 +18,13 @@ namespace VHS
         #endregion
 
         #region BuiltIn Methods
-            void Start()
-            {
-                cameraInputData.ResetInput();
-                movementInputData.ResetInput();
-                interactionInputData.ResetInput();
-                m_actions = new EnoshimaActions();
-                m_actions.Enable();
+        void Start()
+        {
+            cameraInputData.ResetInput();
+            movementInputData.ResetInput();
+            interactionInputData.ResetInput();
+            m_actions = new EnoshimaActions();
+            m_actions.Enable();
             m_actions.Player.Crouch.performed += CheckCrouch;
             m_actions.Player.Sprint.started += StartSprint;
             m_actions.Player.Sprint.canceled += StopSprint;
@@ -33,7 +33,19 @@ namespace VHS
             m_actions.Player.Interraction.started += StartInterract;
             m_actions.Player.Interraction.canceled += StopInterract;
             m_actions.Player.Jump.performed += StartJump;
-            //m_actions.Player.PhotoMode.performed += StartPhotoMode;
+            m_actions.Player.PhotoMode.performed += StartPhotoMode;
+            m_actions.Player.TakePhoto.performed += TakePhoto;
+            m_actions.Player.SwitchFilter.performed += SwitchFilter;
+        }
+
+        private void SwitchFilter(InputAction.CallbackContext obj)
+        {
+            GetComponentInChildren<PhotoCapture>().SwitchFilter();
+        }
+
+        private void TakePhoto(InputAction.CallbackContext obj)
+        {
+            GetComponentInChildren<PhotoCapture>().TakePhoto();
         }
 
         private void StartJump(InputAction.CallbackContext obj)
@@ -57,17 +69,20 @@ namespace VHS
         {
             cameraInputData.ZoomClicked = false;
             cameraInputData.ZoomReleased = true;
+            FindObjectOfType<CameraController>().cameraZoom.ChangeFOV(FindObjectOfType<CameraController>());
         }
 
         private void StartZoom(InputAction.CallbackContext obj)
         {
             cameraInputData.ZoomClicked = true;
             cameraInputData.ZoomReleased = false;
+            FindObjectOfType<CameraController>().cameraZoom.ChangeFOV(FindObjectOfType<CameraController>());
+
         }
 
         private void StartPhotoMode(InputAction.CallbackContext obj)
         {
-            throw new NotImplementedException();
+            GetComponentInChildren<PhotoCapture>().ActivePhotoMode();
         }
 
         private void StopSprint(InputAction.CallbackContext obj)
@@ -84,7 +99,14 @@ namespace VHS
 
         private void CheckCrouch(InputAction.CallbackContext obj)
         {
-            movementInputData.CrouchClicked = true;
+            if(movementInputData.CrouchClicked == true)
+            {
+                movementInputData.CrouchClicked = false;
+            }
+            else if(movementInputData.CrouchClicked == false)
+            {
+                movementInputData.CrouchClicked = true;
+            }
         }
 
         void Update()
@@ -104,8 +126,8 @@ namespace VHS
 
             void GetCameraInput()
         {
-                //m_mouseMovement = m_actions.Player.MouseView.ReadValue<Vector2>();
-            cameraInputData.InputVectorX = m_mouseMovement.x;// nput.GetAxis("Mouse X");
+                m_mouseMovement = m_actions.Player.MouseView.ReadValue<Vector2>();
+                cameraInputData.InputVectorX = m_mouseMovement.x;// nput.GetAxis("Mouse X");
                 cameraInputData.InputVectorY = m_mouseMovement.y; // Input.GetAxis("Mouse Y");
 
                 /*cameraInputData.ZoomClicked = Input.GetMouseButtonDown(1);
@@ -143,6 +165,9 @@ namespace VHS
             m_actions.Player.Interraction.started -= StartInterract;
             m_actions.Player.Interraction.canceled -= StopInterract;
             m_actions.Player.Jump.performed -= StartJump;
+            m_actions.Player.PhotoMode.performed -= StartPhotoMode;
+            m_actions.Player.TakePhoto.performed -= TakePhoto;
+            m_actions.Player.SwitchFilter.performed -= SwitchFilter;
             m_actions.Disable();
             m_actions.Dispose();
         }

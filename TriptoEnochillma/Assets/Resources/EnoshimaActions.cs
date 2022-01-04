@@ -191,7 +191,7 @@ public class @EnoshimaActions : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""50b3419c-70e4-48bf-aa7e-b584d257cf9b"",
-                    ""path"": ""<Mouse>/position"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
