@@ -15,18 +15,18 @@ public class AmbianceDialogueEnter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && ambianceText == true && ambianceDialogue != null)
         {
-            dialogue.SetActive(true);
+            ambianceDialogue.SetActive(true);
         }
         
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && ambianceText == true && ambianceDialogue != null)
         {
-            dialogue.SetActive(false);
+            ambianceDialogue.SetActive(false);
         }
       
     }
