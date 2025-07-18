@@ -6,6 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class PhotoCapture : MonoBehaviour
 {
+    #region Variables
     [Header("PostProc")]
     [SerializeField] private GameObject postProc;
     [SerializeField] private PostProcessVolume postProcProfile;
@@ -44,6 +45,7 @@ public class PhotoCapture : MonoBehaviour
     private bool isInPhotoMode = false;
     //private float waitForQuit = 2.0f;
     private float securityTimer;
+    #endregion
 
     void Start()
     {

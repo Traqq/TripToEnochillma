@@ -6,18 +6,29 @@ public class AmbianceDialogueEnter : MonoBehaviour
 {
     [SerializeField] private GameObject ambianceDialogue;
     [SerializeField] private bool ambianceText;
-    [SerializeField] private Transform playerCamera;
+    [SerializeField] private Camera m_camera;
+    [SerializeField] private Transform m_target;
+    [SerializeField] private Vector3 m_offset;
+    [SerializeField] private RectTransform m_background;
+    [SerializeField] private RectTransform m_parent;
 
+   
     private void Start()
     {
-        playerCamera = Camera.main.transform;
+        ambianceDialogue.SetActive(false);
+        m_parent = transform.parent.GetComponent<RectTransform>();
+        m_background = GetComponent<RectTransform>();     
     }
 
     private void Update()
     {
         if (ambianceDialogue == true)
         {
-            transform.LookAt(playerCamera);
+           Vector3 pos = m_target.position + m_offset;
+           Vector2 pos2D = m_camera.WorldToViewportPoint(pos);
+           pos2D.Scale(new Vector2(m_parent.rect.width, m_parent.rect.height));
+
+           m_background.anchoredPosition = pos2D;
         }
         else
         {
